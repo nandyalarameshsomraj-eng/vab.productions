@@ -137,7 +137,7 @@ h1, h2, h3 {
     background-image: url('vab-hero.jpg');
     background-size: cover;
     background-position: center;
-    /* Removed background-attachment: fixed as it causes issues on mobile/safari */
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
     padding-top: 80px;
@@ -382,8 +382,25 @@ input[type="date"] {
     color: var(--text-secondary);
 }
 
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 4rem; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .contact-container { padding: 40px; }
+}
+
 @media (max-width: 768px) {
-    .hero h1 { font-size: 3rem; }
+    .hero h1 { font-size: 2.5rem; letter-spacing: 6px; }
+    .script-text { font-size: 1.8rem; }
     .nav-links { display: none; }
     .form-row { grid-template-columns: 1fr; }
+    .member-name { font-size: 1.5rem; }
+    .section-title { font-size: 2.2rem; }
+    .services-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 2rem; }
+    .hero-tagline { font-size: 1rem; }
+    .contact-container { padding: 30px 20px; }
 }

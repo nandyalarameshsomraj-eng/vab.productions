@@ -34,18 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // SMOOTH PARALLAX for Hero Background
-    gsap.to('.hero', {
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1 // High scrub value for extra smoothness
-        },
-        backgroundPositionY: '30%',
-        ease: 'none'
-    });
-
     // Glass navbar effect on scroll
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
