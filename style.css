@@ -338,13 +338,33 @@ h1, h2, h3 {
     display: none;
 }
 
-/* Date input specific styles */
+/* Date input specific styles for Mobile/Tablets */
 input[type="date"] {
+    position: relative;
+    min-height: 60px; /* Ensures consistent touch target */
     color-scheme: dark;
+    color: white;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+/* Fix for the calendar icon on WebKit browsers (iOS/Chrome) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    filter: invert(1); /* Makes the default icon white */
+    padding: 15px;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
     border-color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .footer {
