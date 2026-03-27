@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAB Productions | Cinematic Event & Media Excellence</title>
+    <meta name="description"
+        content="VAB Productions is your high-end, all-in-one execution partner for events, logistics, and creative media production.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="container nav-content">
+            <div class="logo-area">
+                <img src="logo" alt="VAB Logo" class="nav-logo" onerror="this.style.display='none'">
+                <span class="brand-name glow-text">VAB PRODUCTIONS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">The Team</a></li>
+                <li><a href="#contact" class="glow-btn">Inquire</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="glow-text fade-in">VAB PRODUCTIONS</h1>
+            <p class="script-text fade-in" style="animation-delay: 0.3s;">Excellence in Execution</p>
+            <p class="hero-tagline fade-in" style="animation-delay: 0.6s;">Your high-end, all-in-one partner for premium
+                events and media production.</p>
+            <div class="hero-actions fade-in" style="animation-delay: 0.9s;">
+                <a href="#services" class="glow-btn">Explore Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title glow-text">Core Capabilities</h2>
+            <div class="services-grid">
+                <div class="service-card glass fade-in">
+                    <h3>Event Execution & Logistics</h3>
+                    <p>End-to-end planning, coordination, and venue execution for seamless experiences.</p>
+                </div>
+                <div class="service-card glass fade-in">
+                    <h3>Media & Coverage</h3>
+                    <p>Professional photography, videography, and cinematic content creation.</p>
+                </div>
+                <div class="service-card glass fade-in">
+                    <h3>On-Shoot Production</h3>
+                    <p>Direction, crew management, and sophisticated shoot handling.</p>
+                </div>
+                <div class="service-card glass fade-in">
+                    <h3>Marketing & Promotions</h3>
+                    <p>Digital reach, event branding, and strategic marketing support.</p>
+                </div>
+                <div class="service-card glass fade-in">
+                    <h3>Delegate Kits (Delkits)</h3>
+                    <p>Custom event kits and premium attendee experience packaging.</p>
+                </div>
+                <div class="service-card glass fade-in">
+                    <h3>Security & Management</h3>
+                    <p>Crowd control, safety operations, and professional event security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Team Section -->
+    <section id="about" class="about">
+        <div class="container text-center">
+            <h2 class="section-title glow-text">The Production Team</h2>
+            <p class="section-subtitle">A founder-driven brand focused on reliability and aesthetic brilliance.</p>
+
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <h3 class="member-name">D. Bhavignesh</h3>
+                    <p class="member-role">Founder</p>
+                </div>
+                <div class="team-member fade-in">
+                    <h3 class="member-name">Abhi Nandyala</h3>
+                    <p class="member-role">Co-Founder</p>
+                </div>
+                <div class="team-member fade-in">
+                    <h3 class="member-name">L. Veekshith</h3>
+                    <p class="member-role">Co-Founder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container glass contact-container fade-in">
+            <p class="contact-lead-text glow-text">One Vision. One Execution. One Partner.</p>
+            <p>Clients don't need multiple vendors. They need one execution partner.</p>
+            <p class="contact-email"><a
+                    href="mailto:vabproductions.official@gmail.com">vabproductions.official@gmail.com</a></p>
+            
+            <form action="https://formsubmit.co/vabproductions.official@gmail.com" method="POST" id="contact-form" class="premium-form">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Highly Qualified Lead - VAB Productions">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required minlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 234 567 890" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-type" class="form-label">Event Type</label>
+                        <select id="event-type" name="event-type" required>
+                            <option value="" disabled selected>Select an event type</option>
+                            <option value="Event Execution">Event Execution & Logistics</option>
+                            <option value="Media Coverage">Media & Coverage</option>
+                            <option value="On-Shoot Production">On-Shoot Production</option>
+                            <option value="Marketing/Promotions">Marketing & Promotions</option>
+                            <option value="Delegate Kits">Delegate Kits</option>
+                            <option value="Security Management">Security & Management</option>
+                            <option value="Other">Other Collaboration</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-date" class="form-label">Preferred Event Date</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Project Details</label>
+                    <textarea id="message" name="message" placeholder="Briefly describe your vision and requirements..." rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="glow-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer-title glow-text">Connect with VAB</h3>
+            <p><a href="mailto:vabproductions.official@gmail.com"
+                    class="footer-email">vabproductions.official@gmail.com</a></p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 VAB Productions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
