@@ -7,8 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1.5,
         opacity: 0,
         y: 30,
-        ease: 'power4.out',
-        stagger: 0.2
+        ease: 'power4.out'
+    });
+    
+    gsap.from('.hero-content p', {
+        duration: 1.5,
+        opacity: 0,
+        y: 20,
+        ease: 'power3.out',
+        delay: 0.5
     });
 
     // Animate sections on scroll
@@ -27,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Parallax effect for Hero
+    // SMOOTH PARALLAX for Hero Background
     gsap.to('.hero', {
         scrollTrigger: {
             trigger: '.hero',
             start: 'top top',
             end: 'bottom top',
-            scrub: true
+            scrub: 1 // High scrub value for extra smoothness
         },
-        backgroundPosition: '50% 100%',
+        backgroundPositionY: '30%',
         ease: 'none'
     });
 
@@ -44,30 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.style.padding = '10px 0';
-            navbar.style.background = 'rgba(5, 5, 5, 0.8)';
+            navbar.style.background = 'rgba(5, 5, 5, 0.85)';
+            navbar.style.backdropFilter = 'blur(10px)';
             navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
         } else {
             navbar.style.padding = '15px 0';
             navbar.style.background = 'rgba(255, 255, 255, 0.03)';
+            navbar.style.backdropFilter = 'blur(5px)';
             navbar.style.boxShadow = 'none';
         }
     });
 
-    // --- BULLETPROOF FORM SUBMISSION ---
+    // Consolidated Form submission handling
     const form = document.getElementById('contact-form');
     if (form) {
         form.addEventListener('submit', (e) => {
             const btn = form.querySelector('button');
             const originalText = btn.innerHTML;
             
-            // If testing on file:// protocol, many browsers block Fetch.
-            // In that case, we will use a standard form submission for 100% reliability.
+            // For local testing, use standard submission
             if (window.location.protocol === 'file:') {
-                btn.innerHTML = 'Sending...';
-                return true; // Let the browser handle submission normally
+                btn.innerHTML = 'Submitting...';
+                return true; 
             }
 
-            // If on a real server, try the smooth background method
             e.preventDefault();
             btn.innerHTML = 'Sending...';
             btn.disabled = true;
@@ -90,12 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.disabled = false;
                     }, 5000);
                 } else {
-                    // Fallback to normal submission if Fetch is blocked
                     form.submit();
                 }
             })
             .catch(error => {
-                // Final Fallback: Just submit the form normally
                 form.submit();
             });
         });

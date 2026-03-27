@@ -96,20 +96,15 @@ h1, h2, h3 {
     gap: 15px;
 }
 
-.brand-name {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--text-primary);
-    white-space: nowrap;
+.nav-logo {
+    height: 50px;
+    width: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
-.nav-logo {
-    height: 35px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease;
+.brand-name {
+    display: none; /* Hide text logo as the image now contains the full branding */
 }
 
 .nav-links {
@@ -138,11 +133,13 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #050505 linear-gradient(135deg, #050505 0%, #0a0a2a 100%);
-    background-image: url('vab_hero_bg_final.png'), linear-gradient(135deg, #050505 0%, #0a0a2a 100%);
+    background: #050505;
+    background-image: url('vab-hero.jpg');
     background-size: cover;
     background-position: center;
+    /* Removed background-attachment: fixed as it causes issues on mobile/safari */
     position: relative;
+    overflow: hidden;
     padding-top: 80px;
 }
 
