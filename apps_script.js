@@ -9,7 +9,7 @@ function doPost(e) {
       data.name, 
       data.phone, 
       data.email, 
-      data['event-type'], 
+      data.service, 
       data['event-date'], 
       data.message
     ]);
