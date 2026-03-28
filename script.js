@@ -76,14 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => {
                 if (response.ok) {
-                    btn.innerHTML = 'Inquiry Sent!';
-                    btn.style.background = '#4CAF50';
-                    form.reset();
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.background = 'transparent';
-                        btn.disabled = false;
-                    }, 5000);
+                    window.location.href = 'thank-you.html';
                 } else {
                     form.submit();
                 }
